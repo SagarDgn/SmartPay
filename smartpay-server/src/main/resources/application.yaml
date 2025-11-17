@@ -1,0 +1,25 @@
+#Mon Nov 17 11:19:03 UTC 2025
+micronaut:
+  application:
+    name: smartpay-server
+  security:
+    authentication: cookie
+
+r2dbc:
+  datasources:
+    default:
+      dialect: POSTGRES
+      db-type: postgres
+      schema-generate: NONE
+      maximum-pool-size: 10
+
+jpa:
+  default:
+    reactive: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        connection:
+          db-type: postgres
+
