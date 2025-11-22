@@ -13,30 +13,28 @@ repositories {
 }
 
 dependencies {
+    annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
-    annotationProcessor("io.micronaut.security:micronaut-security-annotations")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
-    implementation("com.ongres.scram:client:2.1")
+
+    implementation("io.r2dbc:r2dbc-pool")
     implementation("io.micrometer:context-propagation")
-    implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.data:micronaut-data-r2dbc")
     implementation("io.micronaut.reactor:micronaut-reactor")
-    implementation("io.micronaut.security:micronaut-security-oauth2")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
-    implementation("io.micronaut.sql:micronaut-hibernate-reactive")
-    implementation("io.micronaut.validation:micronaut-validation")
     implementation("jakarta.annotation:jakarta.annotation-api")
-    implementation("jakarta.validation:jakarta.validation-api")
+
+    compileOnly("io.micronaut:micronaut-http-client")
+    compileOnly("org.projectlombok:lombok")
+
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.postgresql:r2dbc-postgresql")
+    runtimeOnly("org.yaml:snakeyaml")
+
+    testImplementation("io.micronaut:micronaut-http-client")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testResourcesService("org.postgresql:postgresql")
-    aotPlugins platform("io.micronaut.platform:micronaut-platform:4.10.2")
-    aotPlugins("io.micronaut.security:micronaut-security-aot")
-    implementation 'org.snakeyaml:snakeyaml-engine:2.7'
-
 }
 
 
@@ -58,9 +56,6 @@ micronaut {
         incremental(true)
         annotations("com.smartpay.*")
     }
-    testResources {
-        additionalModules.add("r2dbc-postgresql")
-    }
     aot {
         // Please review carefully the optimizations enabled below
         // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
@@ -72,8 +67,6 @@ micronaut {
         deduceEnvironment = true
         optimizeNetty = true
         replaceLogbackXml = true
-        configurationProperties.put("micronaut.security.jwks.enabled","false")
-        configurationProperties.put("micronaut.security.openid-configuration.enabled","false")
     }
 }
 

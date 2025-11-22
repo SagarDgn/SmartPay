@@ -1,9 +1,0 @@
-#Mon Nov 17 11:19:03 UTC 2025
-micronaut:
-  security:
-    oauth2:
-      clients:
-        default:
-          client-secret: ${OAUTH_CLIENT_SECRET:YYY}
-          client-id: ${OAUTH_CLIENT_ID:XXX}
-

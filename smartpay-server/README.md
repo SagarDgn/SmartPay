@@ -9,21 +9,16 @@
 - [Shadow Gradle Plugin](https://gradleup.com/shadow/)
 - [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
 - [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-## Feature security-oauth2 documentation
+## Feature lombok documentation
 
-- [Micronaut Security OAuth 2.0 documentation](https://micronaut-projects.github.io/micronaut-security/latest/guide/index.html#oauth)
+- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
 
-
-## Feature data-r2dbc documentation
-
-- [Micronaut Data R2DBC documentation](https://micronaut-projects.github.io/micronaut-data/latest/guide/#dbc)
-
-- [https://r2dbc.io](https://r2dbc.io)
+- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
 
 
-## Feature validation documentation
+## Feature micronaut-aot documentation
 
-- [Micronaut Validation documentation](https://micronaut-projects.github.io/micronaut-validation/latest/guide/)
+- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
 
 
 ## Feature test-resources documentation
@@ -38,6 +33,18 @@
 - [https://r2dbc.io](https://r2dbc.io)
 
 
+## Feature data-r2dbc documentation
+
+- [Micronaut Data R2DBC documentation](https://micronaut-projects.github.io/micronaut-data/latest/guide/#dbc)
+
+- [https://r2dbc.io](https://r2dbc.io)
+
+
+## Feature reactor documentation
+
+- [Micronaut Reactor documentation](https://micronaut-projects.github.io/micronaut-reactor/snapshot/guide/index.html)
+
+
 ## Feature annotation-api documentation
 
 - [https://jakarta.ee/specifications/annotations/](https://jakarta.ee/specifications/annotations/)
@@ -46,20 +53,5 @@
 ## Feature serialization-jackson documentation
 
 - [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
-
-
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#nettyHttpClient)
-
-
-## Feature reactor documentation
-
-- [Micronaut Reactor documentation](https://micronaut-projects.github.io/micronaut-reactor/snapshot/guide/index.html)
-
-
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
 
 
