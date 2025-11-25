@@ -1,5 +1,6 @@
 package com.smartpay.entities;
 
+import com.smartpay.domain.USER_ROLE;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.data.annotation.*;
 import io.micronaut.serde.annotation.Serdeable;
@@ -43,4 +44,7 @@ public class UserEntity {
     @DateUpdated
     @MappedProperty("updated_date")
     private Instant updatedDate;
+
+    @MappedProperty(value = "user_role",converter = USER_ROLE.Converter.class)
+    private USER_ROLE role= USER_ROLE.CUSTOMER;
 }
