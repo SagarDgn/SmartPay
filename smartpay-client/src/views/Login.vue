@@ -50,7 +50,7 @@ const formSubmit = async () => {
   <div class="mx-30 my-10 mb-10 mr-10">
     <div>
       <h1 class="text-white text-4xl font-bold">Welcome back,</h1>
-      <p class="text-gray-400 mt-2">Login to access your dashboard</p>
+      <p class="text-gray-400 mt-2">Login to make  transaction</p>
     </div>
 
     <div class="mt-7 text-gray-200">

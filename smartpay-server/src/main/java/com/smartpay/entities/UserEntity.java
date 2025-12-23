@@ -1,8 +1,10 @@
 package com.smartpay.entities;
 
+import com.smartpay.convertor.UserRoleConvertor;
 import com.smartpay.domain.USER_ROLE;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.data.annotation.*;
+import io.micronaut.data.model.DataType;
 import io.micronaut.serde.annotation.Serdeable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,10 +28,10 @@ public class UserEntity {
     private Integer id;
 
     @MappedProperty("first_name")
-    private String first_name;
+    private String firstName;
 
     @MappedProperty("last_name")
-    private String last_name;
+    private String lastName;
 
     @MappedProperty("email")
     private String email;
@@ -45,6 +47,6 @@ public class UserEntity {
     @MappedProperty("updated_date")
     private Instant updatedDate;
 
-    @MappedProperty(value = "user_role",converter = USER_ROLE.Converter.class)
+    @MappedProperty(value = "user_role",converter = UserRoleConvertor.class, type = DataType.STRING)
     private USER_ROLE role= USER_ROLE.CUSTOMER;
 }

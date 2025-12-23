@@ -20,3 +20,7 @@ r2dbc:
       username: postgres
       password: sagar123
 
+jwt:
+  secret: cwuoye8uywc8736764bf797ey7928b7ey7by7y7937dbyyeguchdhatquwuuiuieupmj
+
+

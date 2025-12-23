@@ -1,22 +1,15 @@
 package com.smartpay.domain;
 
+import io.micronaut.context.annotation.Bean;
 import io.micronaut.core.convert.ConversionContext;
+import io.micronaut.data.annotation.TypeDef;
+import io.micronaut.data.model.DataType;
 import io.micronaut.data.model.runtime.convert.AttributeConverter;
+import jakarta.inject.Singleton;
+
 
 public enum USER_ROLE {
     CUSTOMER,
     ADMIN;
 
-    public static class Converter implements AttributeConverter<USER_ROLE, String> {
-
-        @Override
-        public String convertToPersistedValue(USER_ROLE entityValue, ConversionContext context) {
-            return entityValue == null ? null : entityValue.name();
-        }
-
-        @Override
-        public USER_ROLE convertToEntityValue(String datastoreValue, ConversionContext context) {
-            return datastoreValue == null ? null : USER_ROLE.valueOf(datastoreValue);
-        }
-    }
 }
