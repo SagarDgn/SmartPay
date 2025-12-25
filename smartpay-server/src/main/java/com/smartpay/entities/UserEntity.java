@@ -1,6 +1,6 @@
 package com.smartpay.entities;
 
-import com.smartpay.convertor.UserRoleConvertor;
+import com.smartpay.domain.convertor.UserRoleConvertor;
 import com.smartpay.domain.USER_ROLE;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.data.annotation.*;
@@ -49,4 +49,5 @@ public class UserEntity {
 
     @MappedProperty(value = "user_role",converter = UserRoleConvertor.class, type = DataType.STRING)
     private USER_ROLE role= USER_ROLE.CUSTOMER;
+
 }

@@ -1,4 +1,4 @@
-package com.smartpay.convertor;
+package com.smartpay.domain.convertor;
 
 import com.smartpay.domain.USER_ROLE;
 import io.micronaut.core.convert.ConversionContext;
@@ -8,8 +8,9 @@ import jakarta.inject.Singleton;
 @Singleton
 public class UserRoleConvertor implements AttributeConverter<USER_ROLE, String> {
 
+
     @Override
-    public String convertToPersistedValue(USER_ROLE entityValue, ConversionContext context) {
+    public  String convertToPersistedValue(USER_ROLE entityValue, ConversionContext context) {
         return entityValue == null ? null : entityValue.name();
     }
 
